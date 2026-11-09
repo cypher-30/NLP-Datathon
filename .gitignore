@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.joblib
+data/raw/
+.env
+secrets.toml
+
+# Team notes, never published
+CLAUDE.md
+HANDOFF.md
+.claude/
+Explanations/
