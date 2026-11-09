@@ -33,7 +33,7 @@ st.caption('Type a request in Shona and see what the assistant thinks you want. 
 
 path = Path('artifacts') / 'intent' / 'model.joblib'
 if not path.exists():
-    st.info('Train the model first: python train.py --track intent --data data/contribution_working.csv --practice')
+    st.info('Train the model first: python train.py --track intent --data data/contribution.csv')
     st.stop()
 pack = joblib.load(path)  # Only load model files you created and trust.
 if pack['practice']:
@@ -45,8 +45,28 @@ with st.sidebar:
         st.write('•', FRIENDLY.get(k, k))
     st.caption('Anything else is reported as not supported.')
 
-text = st.text_area('Your request (Shona)', placeholder='Type here...')
-if st.button('Understand'):
+# Example requests: real training sentences from our dataset (not test rows), plus one off-topic request.
+EXAMPLES = [
+    ('Weather', 'Mamiriro ekunze achange akaita sei nhasi?'),
+    ('Alarm', 'Isa alarm ya5:30 mangwanani.'),
+    ('Add to a list', 'Wedzera chingwa parunyorwa rwangu rwezvekutenga.'),
+    ('Calendar', 'Ndiratidze zviitiko zviri pakarenda yangu nhasi.'),
+    ('Meaning of a word', 'Inflation chii?'),
+    ('Not supported', 'Please book me a flight to Nairobi'),
+]
+if 'request_text' not in st.session_state:
+    st.session_state['request_text'] = ''
+
+def use_example(example):
+    st.session_state['request_text'] = example
+
+st.caption('Try an example:')
+cols = st.columns(3)
+for i, (label, example) in enumerate(EXAMPLES):
+    cols[i % 3].button(label, key=f'ex_{i}', on_click=use_example, args=(example,), use_container_width=True)
+
+text = st.text_area('Your request (Shona)', key='request_text', placeholder='Type here, or pick an example above...')
+if st.button('Understand', type='primary'):
     if not text.strip():
         st.info('Please type something first.')
         st.stop()
