@@ -43,28 +43,28 @@ The split is stored in the CSV, and the model has a fixed seed, so the same data
 Practice run (English teaching data, not our result): add `--practice` and use `data/practice_intent.csv`. It saves to the same `artifacts/intent/` folder, so retrain on `data/contribution.csv` afterwards.
 
 ## Data
-`data/contribution.csv`: 250 Shona sentences, 10 intent labels, 25 per label, split 150 train / 50 dev / 50 test (15 / 5 / 5 per label). Labels are defined in `taxonomy.csv`.
+`data/contribution.csv`: 295 Shona sentences, 10 intent labels, split 195 train / 50 dev / 50 test (dev and test are 5 per label; train is 15 to 27 per label; 45 train-only rows were added for list, calendar and date/time phrasing, and 12 train rows that closely matched dev or test rows were reworded by the author and re-reviewed). Labels are defined in `taxonomy.csv`.
 
 - Sentences were written by the contributor (`contributor_code` MUK, `source_method` `original_human`).
 - Every row was reviewed by a second Shona speaker (`reviewer_code` FDK, `review_status` `independently_reviewed`). The reviewer differs from the author on every row.
-- No external datasets are included in these 250 rows. Optional outside Shona resources, if we use any, would be kept in a separate file and would not count towards the row minimum.
+- No external datasets are included in these 295 rows. Optional outside Shona resources, if we use any, would be kept in a separate file and would not count towards the row minimum.
 - Permission evidence and contributor details are kept out of this repository.
 
 ## Demo behaviour
 - Confident match: "It looks like you want: <action>", plus what the assistant would do and two other possibilities.
 - Weak match: "I am not sure, but it looks like you want: <action>".
-- Unrecognised input: "Sorry, I don't think I can help with that". This happens when the model's top confidence is below 0.145 or the text's similarity to every training sentence is below 0.22. The thresholds were chosen on dev rows and off-topic probes, never on the test split.
+- Unrecognised input: "Sorry, I don't think I can help with that". This happens when the model's top confidence is below 0.16 or the text's similarity to every training sentence is below 0.28. The thresholds were chosen on dev rows and off-topic probes, never on the test split.
 - The demo never performs real actions.
 
 ## Results
 Final test results are added here only after the single `evaluate.py` run on the frozen dataset.
 
-- Dev (working figure, may change while the data is being fixed): accuracy 0.90, macro-F1 0.885 against a majority baseline of 0.018.
+- Dev (working figure, may change while the data is being fixed): accuracy 0.92, macro-F1 0.919 against a majority baseline of 0.018.
 - Test: *to be filled in after the final evaluation.*
 - Error analysis (up to five real errors from `test_predictions.csv`): *to be filled in by the documentation lead.*
 
 ## Limitations
-- Small data: 250 sentences, 5 test sentences per label, so scores move a lot with one sentence.
+- Small data: 295 sentences, 5 test sentences per label, so scores move a lot with one sentence.
 - Closely related labels, especially `calendar_set` and `calendar_query`, are confused because they share vocabulary.
 - One writer and one reviewer, so the data reflects one variety of Shona and one spelling style.
 - The model matches letter patterns, not meaning. It cannot understand words it has never seen.

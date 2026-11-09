@@ -10,9 +10,9 @@ import streamlit as st
 from core import FRIENDLY
 
 # Thresholds were chosen by looking at DEV rows and a few off-topic probes, never the test split.
-MIN_SIMILARITY = 0.22   # below this the text looks unlike any training sentence -> unsupported
-MIN_CONFIDENCE = 0.145  # below this the model is basically guessing -> unsupported
-SURE_CONFIDENCE = 0.20  # below this (but above MIN) we show the answer as "not sure"
+MIN_SIMILARITY = 0.28   # below this the text looks unlike any training sentence -> unsupported
+MIN_CONFIDENCE = 0.16   # below this the model is basically guessing -> unsupported
+SURE_CONFIDENCE = 0.22  # below this (but above MIN) we show the answer as "not sure"
 
 WHAT_HAPPENS = {
     'weather_query': 'would look up the weather forecast for you.',
