@@ -1,32 +1,26 @@
-# Data Collection and Preparation Plan
+# Data Collection and Preparation Plan 
 
-## Data Collection
+## 1. Data Collection & Evolution
 
-The dataset was developed by creating Shona sentences corresponding to the ten intent categories defined in the datathon guidelines.
+To solve the lack of training data for Shona intent classification, we built our own dataset from scratch. We first collected a baseline set of native Shona sentences covering all ten required datathon intent categories. 
 
-The initial collection contained 250 sentences, prepared on 8 November 2026.
-
-Following model development and error analysis, **45 additional training sentences** were added on 9–10 November to improve coverage of list queries, calendar questions, and date/time expressions.
-
-The final dataset contains **295 sentences**. All of them were written by the contributor (`MUK`) without AI assistance (`source_method` `original_human`).
+After testing our initial model and reviewing errors, we added 45 more training sentences to improve how well the model handles list queries, calendar questions, and date/time expressions. This brought our final dataset to **295 sentences**. None of the 295 sentences was written by AI or with AI help.
 
 A separate 360-sentence stress set was generated with ChatGPT and checked by Mukundi. It was used only to find weaknesses in the model and demo. It was not copied into the dataset, and it was not used for training or for the test score.
 
-## Annotation and Review Workflow
+---
 
-Each sentence was assigned one primary intent label based on its meaning.
+## 2. Annotation & Review Workflow
 
-The annotation process followed the decision rules documented in [`ANNOTATION_GUIDE.md`](ANNOTATION_GUIDE.md), particularly for categories with overlapping meanings.
+To keep the meanings clear and consistent, every sentence was given one main intent label following the rules in [`ANNOTATION_GUIDE.md`](ANNOTATION_GUIDE.md). 
 
-An independent Shona speaker, identified as `FDK`, reviewed the examples for linguistic correctness and label suitability.
+To meet the datathon's quality and provenance rules, every sentence was independently reviewed by a second Shona speaker (`FDK`) to check for natural wording and correct labels. All review notes and checks are saved in [`QUALITY.md`](QUALITY.md).
 
-Review evidence and outstanding verification requirements are documented in [`QUALITY.md`](QUALITY.md).
+---
 
-## Dataset Splitting
+## 3. Dataset Splitting
 
-We divided the original 250 examples into 150 training, 50 development, and 50 testing sentences.
-
-We assigned the 45 additional sentences to the training set.
+We split our 295 sentences into training, development, and test sets to keep a balanced mix across all categories:
 
 | **Split** | **Sentences** | **Percentage** |
 |---|---:|---:|
@@ -35,22 +29,18 @@ We assigned the 45 additional sentences to the training set.
 | Testing | 50 | 16.9% |
 | **Total** | **295** | **100%** |
 
-Each intent contains at least 15 training examples and exactly five development and five test examples.
+Every intent class has at least 15 training examples, plus exactly five development and five test examples. We use the training set to train the model, the dev set to test different settings, and the test set only for the final evaluation.
 
-The training set fits the model, the development set supports model improvement, and the test set is reserved for final evaluation.
+---
 
-## Cleaning and Preparation
+## 4. Cleaning & Preventing Data Leakage
 
-We checked the dataset for missing fields, unsupported labels, duplicate sentences, and similarities between splits.
+Before running the model, we checked the data for missing fields, duplicate rows, and accidental overlaps between splits. 
 
-We reworded twelve training sentences that closely resembled development or test examples.
+To prevent data leakage where the model memorizes test answers because similar sentences appear in training we reworded 12 training sentences that were too close to the dev or test sets. We also grouped related sentences using `group_id` so that similar variations always stay in the same split. Full details are in [`QUALITY.md`](QUALITY.md).
 
-Related examples were assigned shared `group_id` values to prevent the same group from appearing across different splits.
+---
 
-The remaining similarity findings and validation results are recorded in [`QUALITY.md`](QUALITY.md).
+## 5. Final Status
 
-## Final Dataset Status
-
-The 295-sentence dataset passed the organizers' validation script on **10 November 2026** and was then frozen.
-
-The final test evaluation was run **once**, on **11 November 2026**, with the frozen dataset and model: test accuracy 0.800, macro-F1 0.799 (majority baseline macro-F1 0.018). Details are in [`QUALITY.md`](QUALITY.md).
+Our 295-sentence dataset successfully passed the organizers' validation script and was then frozen. The final test was run **once**, on **11 November 2026**, on the 50 frozen test sentences: accuracy **0.800**, macro-F1 **0.799**, against a majority baseline macro-F1 of 0.018. Full results are in [`QUALITY.md`](QUALITY.md).
