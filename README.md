@@ -91,7 +91,9 @@ All 10 errors: SN-023, SN-100, SN-121, SN-123, SN-125, SN-149, SN-172, SN-200, S
 - Probabilities are uncalibrated and should not be read as percentages of certainty.
 
 ## Model file
-`*.joblib` is gitignored. Anyone who clones the repo rebuilds the model with the commands above. How the trained model is handed to the judges is to be confirmed with the organisers. Only load `.joblib` files you created yourself.
+`*.joblib` is gitignored, so the trained model is attached to the GitHub release **v1.0-final**: https://github.com/cypher-30/NLP-Datathon/releases/tag/v1.0-final (`model.joblib`, SHA-256 `29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d`). It is the exact model used for the final test run. Put it at `artifacts/intent/model.joblib` to run the demo or `evaluate.py` without retraining. Anyone can also rebuild it with the commands above (fixed split and seed). Only load `.joblib` files from a source you trust.
+
+The submission manifest (commit, data counts, licences, metric files, demo and known issues) is in `SUBMISSION.md`.
 
 ## Licence
 Kit code: see `LICENSE_CODE.txt`. Data (`data/contribution.csv`): CC BY 4.0. See `DATA_CARD.md`.
