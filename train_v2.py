@@ -7,7 +7,7 @@ highest mean of (CV macro-F1, dev macro-F1); if LaBSE wins by less than 0.02 the
   python train_v2.py --data data/contribution.csv --out artifacts/v2
   python train_v2.py --data <older csv> --out artifacts/v2_ablation_v4data   # same models on the old data
 """
-import argparse, json, time
+import argparse, hashlib, json, time
 from pathlib import Path
 import joblib
 import numpy as np
@@ -48,7 +48,8 @@ def main():
                 'track': 'intent', 'data_sha256': fingerprint(df), 'sim_vectorizer': vec, 'train_matrix': mat,
                 'train_texts': tr.text.tolist(), 'train_labels': tr.label.tolist(), 'train_ids': tr.record_id.tolist()}
         joblib.dump(pack, out / f'{name}.joblib')
-        summary['candidates'][name] = {'best_params': best['params'], 'cv_macro_f1': best['cv_macro_f1'],
+        pack_sha = hashlib.sha256((out / f'{name}.joblib').read_bytes()).hexdigest()
+        summary['candidates'][name] = {'pack_file': f'{name}.joblib', 'pack_sha256': pack_sha, 'best_params': best['params'], 'cv_macro_f1': best['cv_macro_f1'],
                                        'cv_std': best['cv_std'], 'dev_accuracy': dev_score['accuracy'],
                                        'dev_macro_f1': dev_score['macro_f1'], 'dev_confusion_matrix': dev_score['confusion_matrix'],
                                        'all_trials': trials, 'seconds': round(time.time() - t0, 1)}

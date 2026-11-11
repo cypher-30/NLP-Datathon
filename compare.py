@@ -8,7 +8,7 @@ Refuses to run without --final, with uncommitted changes, or if it has already b
 
   python compare.py --final --data data/contribution.csv --packs artifacts/v2 artifacts/v2_ablation_v4data
 """
-import argparse, json, subprocess, sys, datetime
+import argparse, hashlib, json, subprocess, sys, datetime
 from pathlib import Path
 import joblib
 import numpy as np
@@ -19,6 +19,11 @@ from validate import check
 from core import INTENTS, classification_score
 
 OUT = Path('artifacts/v2')
+V1_SHA256 = '29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d'  # frozen v1 model (release v1.0-final)
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 LOCK = OUT / 'test_run.lock'
 
 
@@ -53,12 +58,28 @@ def main():
         sys.exit('Refusing: uncommitted changes. Commit the frozen state first so the run is traceable.')
     commit = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True).stdout.strip()
 
+    # The packs are gitignored, so freeze them by hash: each folder's selection.json must be COMMITTED and list
+    # the sha256 of every pack we load; the v1 model must be the frozen release file.
+    if sha(a.v1) != V1_SHA256:
+        sys.exit('Refusing: v1 model is not the frozen v1.0-final file.')
+    frozen = {}
+    for folder in a.packs:
+        sel = Path(folder) / 'selection.json'
+        if subprocess.run(['git', 'ls-files', '--error-unmatch', str(sel)], capture_output=True).returncode:
+            sys.exit(f'Refusing: {sel} is not committed. Commit the selection (with pack hashes) first.')
+        for name, c in json.loads(sel.read_text(encoding='utf-8'))['candidates'].items():
+            f = Path(folder) / c['pack_file']
+            if sha(f) != c['pack_sha256']:
+                sys.exit(f'Refusing: {f} differs from the hash recorded in {sel} (retrained after freezing?).')
+            frozen[f'{Path(folder).name}/{name}'] = f
+    OUT.mkdir(parents=True, exist_ok=True)
+    LOCK.write_text(f"started {datetime.datetime.now().astimezone().isoformat(timespec='seconds')} at commit {commit}\n", encoding='utf-8')  # before scoring: no silent second look
+
     df = check(a.data, False, 'intent')
     tr, test = df[df.split.eq('train')], df[df.split.eq('test')].reset_index(drop=True)
     models = {'v1_frozen (kit baseline, dataset v4)': joblib.load(a.v1)['model']}  # our own trusted files only
-    for folder in a.packs:
-        for f in sorted(Path(folder).glob('*.joblib')):
-            models[f'{Path(folder).name}/{f.stem}'] = joblib.load(f)['model']
+    for key, f in frozen.items():
+        models[key] = joblib.load(f)['model']
     models['majority_baseline'] = DummyClassifier(strategy='most_frequent').fit(tr.text, tr.label)
 
     result = {'run_at': datetime.datetime.now().astimezone().isoformat(timespec='seconds'), 'commit': commit,
@@ -75,10 +96,9 @@ def main():
         preds[name] = pred
         print(f"{name:55s} acc {overall['accuracy']:.3f}  macro-F1 {overall['macro_f1']:.3f}  95% CI {overall['macro_f1_95ci'][0]:.3f}-{overall['macro_f1_95ci'][1]:.3f}")
 
-    OUT.mkdir(parents=True, exist_ok=True)
     (OUT / 'test_metrics.json').write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding='utf-8')
     preds.to_csv(OUT / 'test_predictions.csv', index=False)
-    LOCK.write_text(f"run {result['run_at']} at commit {commit}\n", encoding='utf-8')
+    LOCK.write_text(LOCK.read_text(encoding='utf-8') + f"finished {result['run_at']}\n", encoding='utf-8')
     print(f'Saved {OUT}/test_metrics.json, test_predictions.csv and {LOCK.name}. Commit them now; do not rerun.')
 
 
