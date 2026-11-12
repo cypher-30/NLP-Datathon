@@ -1,0 +1,101 @@
+record_id,text,label,contributor_code,"v1_frozen (kit baseline, dataset v4)",v2/A_kit_baseline,v2/B_tuned_tfidf,v2/C_labse,v2_ablation_v4data/A_kit_baseline,v2_ablation_v4data/B_tuned_tfidf,v2_ablation_v4data/C_labse,majority_baseline
+SN-296,Kuchanaya here kuGweru neChitatu chinouya?,weather_query,MUK,calendar_query,weather_query,weather_query,weather_query,calendar_query,weather_query,weather_query,calendar_query
+SN-297,weather iri sei kuMasvingo nyamusi,weather_query,MUK,datetime_query,weather_query,weather_query,weather_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-298,kuchapisa zvakadini mangwana masikati,weather_query,MUK,calendar_query,weather_query,weather_query,weather_query,calendar_query,weather_query,weather_query,calendar_query
+SN-299,Ndingada kuziva kuti kuchatonhora zvakadii kuKariba neSvondo.,weather_query,MUK,lists_createoradd,weather_query,weather_query,calendar_set,lists_createoradd,calendar_set,calendar_query,calendar_query
+SN-300,ko mvura ichanaya here manheru aya kuChinhoyi,weather_query,MUK,weather_query,weather_query,weather_query,weather_query,weather_query,weather_query,weather_query,calendar_query
+SN-301,Check weather forecast yeRusape yeweekend.,weather_query,MUK,calendar_set,datetime_query,weather_query,calendar_set,calendar_set,calendar_set,calendar_set,calendar_query
+SN-302,Pane chando chinotarisirwa usiku hwanhasi here?,weather_query,MUK,calendar_query,weather_query,weather_query,weather_query,calendar_query,weather_query,weather_query,calendar_query
+SN-303,Mvura ichadonha zvakawanda sei svondo rino?,weather_query,MUK,datetime_query,weather_query,weather_query,weather_query,datetime_query,weather_query,weather_query,calendar_query
+SN-304,temperature ichakwira here mangwana?,weather_query,MUK,weather_query,weather_query,weather_query,weather_query,weather_query,weather_query,weather_query,calendar_query
+SN-305,Ndichada bhachi here kana ndichibuda neusiku?,weather_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-306,Ko time ingani izvozvi?,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-307,nhasi ndiChipiri here kana Chitatu,datetime_query,MUK,calendar_query,calendar_query,calendar_query,datetime_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-308,Mumwedzi uno mune maSvondo mangani?,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-309,date yanhasi ndeyei,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-310,Mwedzi wapera waiva mwedzi upi?,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-311,Nhasi tiri muvhiki yechingani yegore?,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-312,Gore rinouya richatanga nezuva ripi revhiki?,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-313,"What's the time ikozvino, ndiudzewo.",datetime_query,MUK,datetime_query,news_query,news_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-314,Musi wa25 Zvita gore rino uchawira pazuva ripi?,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-315,Kwapera mazuva mangani kubva gore iri ratanga?,datetime_query,MUK,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,datetime_query,calendar_query
+SN-316,Set alarm ya4:50 mangwanani.,alarm_set,MUK,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,calendar_query
+SN-317,ndimutsewo na half past five,alarm_set,MUK,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,calendar_query
+SN-318,"Ndoda alarm ichirira na5 manheru, ndizive kuti ndobuda kubasa.",alarm_set,MUK,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,calendar_query
+SN-319,"Mangwana ndimutse na quarter to six, ndine bhazi rekukwira kuenda kuMasvingo.",alarm_set,MUK,calendar_query,alarm_set,alarm_set,alarm_set,calendar_query,calendar_query,alarm_set,calendar_query
+SN-320,"Ndiisirewo maalarm maviri, imwe na5 imwe na5:10.",alarm_set,MUK,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,calendar_query
+SN-321,Ndiisirewo alarm ichirira na9 usiku hwanhasi.,alarm_set,MUK,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,calendar_query
+SN-322,"Ndiri kuda kuvata kwekanguva, ndimutse kana paita 20 minutes.",alarm_set,MUK,calendar_query,alarm_set,alarm_set,alarm_set,calendar_query,alarm_set,alarm_set,calendar_query
+SN-323,Gadzirisa alarm yeMuvhuro kusvika Chishanu na6:15.,alarm_set,MUK,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,alarm_set,calendar_query
+SN-324,wake me up na7 tomorrow plz,alarm_set,MUK,calendar_query,alarm_set,alarm_set,alarm_set,calendar_query,datetime_query,alarm_set,calendar_query
+SN-325,"PaChina na3:30 masikati alarm ngairire, ndisakanganwa kutora vana kuchikoro.",alarm_set,MUK,calendar_query,alarm_set,alarm_set,alarm_set,calendar_query,alarm_set,alarm_set,calendar_query
+SN-326,Isa musangano naTatenda pakarenda neChina na10.,calendar_set,MUK,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_query
+SN-327,"Rwendo rwangu rwekuKariba kubva 5 kusvika 8 Zvita, runyore pakarenda.",calendar_set,MUK,lists_query,calendar_set,calendar_set,alarm_set,lists_query,calendar_set,play_music,calendar_query
+SN-328,add muchato waNyasha pacalendar yaSaturday,calendar_set,MUK,calendar_query,calendar_set,calendar_set,lists_createoradd,calendar_query,calendar_query,lists_createoradd,calendar_query
+SN-329,Ronga nguva yekugera bvudzi Chipiri masikati.,calendar_set,MUK,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_query
+SN-330,Ndiisire pakarenda zuva rekubhadhara rent musi wa1 wega wega.,calendar_set,MUK,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_query
+SN-331,Book call naFarai mangwana na4 pm pa calendar.,calendar_set,MUK,calendar_query,calendar_set,alarm_set,calendar_set,calendar_query,calendar_query,calendar_set,calendar_query
+SN-332,Ndiisirei musangano wevarimi pakarenda na2 masikati anhasi.,calendar_set,MUK,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_query
+SN-333,Isa kuenda kumariro kuChinhoyi neMugovera pakarenda.,calendar_set,MUK,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_query
+SN-334,Ronga zuva rekunyoresa ID kuMasvingo neChipiri chinouya.,calendar_set,MUK,calendar_query,calendar_set,calendar_set,calendar_set,calendar_query,calendar_set,calendar_set,calendar_query
+SN-335,Isa mutambo wenhabvu weDynamos neCAPS pakarenda yeSvondo.,calendar_set,MUK,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_set,calendar_query
+SN-336,Ndine chii mangwana mangwanani?,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-337,Ndakaronga here chimwe chinhu neMugovera manheru?,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-338,Nezuro ndaive nemusangano naani?,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,lists_query,calendar_query,calendar_query
+SN-339,ndine zvirongwa here weekend iyi,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-340,Musangano wangu naNyasha wakaitwa riini svondo rapera?,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-341,"Check calendar yangu, ndiri free here Chishanu masikati?",calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-342,Nyamusi ndine chii pakarenda?,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-343,Rwendo rwekuKariba rwakanyorwa pakarenda kuti runotanga riini?,calendar_query,MUK,lists_query,calendar_query,calendar_query,lists_query,lists_query,calendar_query,lists_query,calendar_query
+SN-344,Ndakaronga kusangana naFarai here mwedzi wapera?,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-345,Pane chandakaisa pakarenda chiri kupindirana neMuvhuro unouya here?,calendar_query,MUK,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query,lists_query,calendar_query,calendar_query
+SN-346,"Dovi rapera, riise mune zvandichatenga.",lists_createoradd,MUK,lists_query,lists_query,lists_query,lists_createoradd,lists_query,lists_query,lists_createoradd,calendar_query
+SN-347,Gadzira rondedzero yezvekuita kuti mabiko aNyasha afambe zvakanaka.,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-348,isa matemba pa grocery list,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-349,Ndinoda list itsva yezvinodiwa kumba kwasekuru kuMasvingo.,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-350,Nyora kuripira ZESA mune zvekuita zvangu zvaMuvhuro.,lists_createoradd,MUK,lists_createoradd,lists_query,lists_query,lists_createoradd,lists_createoradd,lists_query,lists_createoradd,calendar_query
+SN-351,Wedzera upfu mapaketi maviri pane zvekutenga.,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-352,Tanga to-do list yekugadzirira bvunzo.,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-353,Pamabasa angu emangwana wedzera kuendesa mapepa kuhofisi.,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-354,Kudyara mbeu kuiswe pane zvekuita nhasi.,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-355,add Farai pa list yevanhu vandichadzidza navo,lists_createoradd,MUK,lists_createoradd,lists_createoradd,lists_query,lists_createoradd,lists_createoradd,lists_createoradd,lists_createoradd,calendar_query
+SN-356,Ndichiri kufanira kutenga chii pane zvandichatenga?,lists_query,MUK,lists_query,lists_query,lists_query,lists_query,lists_query,lists_query,lists_query,calendar_query
+SN-357,Dovi rakaiswa here mune zvekutenga?,lists_query,MUK,lists_query,lists_query,lists_query,lists_query,lists_query,lists_query,lists_query,calendar_query
+SN-358,Ndiratidze zvekuita zvangu zveChitatu.,lists_query,MUK,lists_query,lists_query,lists_query,calendar_query,lists_query,lists_query,calendar_query,calendar_query
+SN-359,To-do list yangu yasara nemabasa mangani?,lists_query,MUK,calendar_query,lists_createoradd,lists_query,lists_query,calendar_query,calendar_query,lists_query,calendar_query
+SN-360,ndakanyora chii parondedzero yemabiko aNyasha,lists_query,MUK,lists_query,lists_query,lists_query,lists_query,lists_query,lists_query,lists_query,calendar_query
+SN-361,Verengera mabasa ese ari parondedzero yekugadzirira bvunzo.,lists_query,MUK,lists_query,lists_query,lists_query,lists_createoradd,lists_query,lists_query,lists_createoradd,calendar_query
+SN-362,Rondedzero yezvinodiwa kumba kwasekuru ine chii?,lists_query,MUK,lists_createoradd,lists_query,lists_query,lists_query,lists_createoradd,qa_definition,lists_query,calendar_query
+SN-363,Upfu huchiri pane zvekutenga here?,lists_query,MUK,lists_query,lists_query,lists_query,lists_query,lists_query,lists_query,weather_query,calendar_query
+SN-364,Ndine mabasa api ari parondedzero yanhasi?,lists_query,MUK,lists_query,lists_query,lists_query,calendar_query,lists_query,lists_query,calendar_query,calendar_query
+SN-365,List dzandakagadzira vhiki rino ndedzipi?,lists_query,MUK,calendar_query,calendar_query,lists_query,calendar_query,calendar_query,calendar_query,calendar_query,calendar_query
+SN-366,Ndiridzirewo Killer T.,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,play_music,calendar_query
+SN-367,play mbira music ndiri kubika,play_music,MUK,datetime_query,datetime_query,play_music,play_music,datetime_query,datetime_query,play_music,calendar_query
+SN-368,Isa nziyo dzaJanet Manyowa.,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,play_music,calendar_query
+SN-369,Isa jiti rekutamba.,play_music,MUK,lists_createoradd,qa_definition,lists_createoradd,play_music,lists_createoradd,lists_createoradd,play_music,calendar_query
+SN-370,Ridzai nziyo dzaHoly Ten dzichangoburitswa.,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,play_music,calendar_query
+SN-371,Ndiridzire mbira dzaStella Chiweshe.,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,play_music,calendar_query
+SN-372,shuffle nziyo dzese dziri mufoni,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,play_music,calendar_query
+SN-373,Ridza album yaKiller T yose kubva pakutanga.,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,play_music,calendar_query
+SN-374,Isa rwiyo rwakakurumbira svondo rino paYouTube.,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,calendar_set,calendar_query
+SN-375,Dzokorora rwiyo urwu.,play_music,MUK,play_music,play_music,play_music,play_music,play_music,play_music,play_music,calendar_query
+SN-376,Kuchii kuri kuitika kuGweru munhau dzanhasi?,news_query,MUK,news_query,news_query,news_query,news_query,news_query,news_query,news_query,calendar_query
+SN-377,"Warriors dzaita sei, nhau dzinoti chii?",news_query,MUK,news_query,news_query,news_query,qa_definition,news_query,news_query,news_query,calendar_query
+SN-378,any news nezve ZESA load shedding?,news_query,MUK,lists_createoradd,lists_createoradd,news_query,news_query,lists_createoradd,datetime_query,news_query,calendar_query
+SN-379,South Africa yakamira sei munhau dzanhasi?,news_query,MUK,news_query,news_query,news_query,news_query,news_query,news_query,news_query,calendar_query
+SN-380,Nyamusi kwaita nhau dzei?,news_query,MUK,news_query,news_query,news_query,datetime_query,news_query,news_query,datetime_query,calendar_query
+SN-381,Ndiverengere headlines dzeHerald dzanhasi.,news_query,MUK,news_query,news_query,news_query,news_query,news_query,news_query,news_query,calendar_query
+SN-382,ZiG yadonha here? Ndiudze nhau dzayo.,news_query,MUK,news_query,news_query,news_query,news_query,news_query,news_query,news_query,calendar_query
+SN-383,Mutungamiri wenyika ataurei nezuro munhau?,news_query,MUK,datetime_query,news_query,news_query,news_query,datetime_query,lists_query,news_query,calendar_query
+SN-384,Nhau dzekurima nemvura yekudiridza dzichangobuda ndedzipi?,news_query,MUK,news_query,news_query,news_query,news_query,news_query,news_query,news_query,calendar_query
+SN-385,Pane chakaitika kuMasvingo nezuro husiku chiri munhau here?,news_query,MUK,lists_query,news_query,news_query,news_query,lists_query,lists_query,news_query,calendar_query
+SN-386,Ndiudzewo blockchain kuti chii.,qa_definition,MUK,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,calendar_query
+SN-387,Chivanhu chinorevei chaizvo?,qa_definition,MUK,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,datetime_query,calendar_query
+SN-388,Humbowo chii pamutemo?,qa_definition,MUK,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,calendar_query
+SN-389,Cryptocurrency imari yerudzii?,qa_definition,MUK,datetime_query,qa_definition,qa_definition,qa_definition,datetime_query,qa_definition,qa_definition,calendar_query
+SN-390,Shuro imhuka yerudzii?,qa_definition,MUK,calendar_set,qa_definition,qa_definition,datetime_query,calendar_set,datetime_query,datetime_query,calendar_query
+SN-391,What is mitosis? Tsanangura muchiShona.,qa_definition,MUK,calendar_query,qa_definition,qa_definition,qa_definition,calendar_query,qa_definition,qa_definition,calendar_query
+SN-392,Mukwerera unorevei?,qa_definition,MUK,qa_definition,qa_definition,qa_definition,datetime_query,qa_definition,qa_definition,datetime_query,calendar_query
+SN-393,Ndiudze zvinoreva interest rate pachikwereti.,qa_definition,MUK,datetime_query,qa_definition,qa_definition,qa_definition,datetime_query,datetime_query,qa_definition,calendar_query
+SN-394,Immigration inorevei kana tichitaura nezvenyika?,qa_definition,MUK,calendar_query,qa_definition,qa_definition,qa_definition,calendar_query,calendar_query,qa_definition,calendar_query
+SN-395,Ko 'chiremerera' zvinoreva kudini?,qa_definition,MUK,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,qa_definition,calendar_query

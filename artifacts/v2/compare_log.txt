@@ -1,0 +1,9 @@
+v1_frozen (kit baseline, dataset v4)                    acc 0.680  macro-F1 0.681  95% CI 0.574-0.759
+v2/A_kit_baseline                                       acc 0.890  macro-F1 0.890  95% CI 0.820-0.943
+v2/B_tuned_tfidf                                        acc 0.920  macro-F1 0.919  95% CI 0.853-0.967
+v2/C_labse                                              acc 0.860  macro-F1 0.857  95% CI 0.772-0.919
+v2_ablation_v4data/A_kit_baseline                       acc 0.680  macro-F1 0.681  95% CI 0.574-0.759
+v2_ablation_v4data/B_tuned_tfidf                        acc 0.760  macro-F1 0.772  95% CI 0.675-0.844
+v2_ablation_v4data/C_labse                              acc 0.820  macro-F1 0.818  95% CI 0.728-0.888
+majority_baseline                                       acc 0.100  macro-F1 0.018  95% CI 0.008-0.028
+Saved artifacts\v2/test_metrics.json, test_predictions.csv and test_run.lock. Commit them now; do not rerun.
