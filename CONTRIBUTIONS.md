@@ -30,6 +30,8 @@ His contributions included:
 
 * Developing 45 additional training examples to improve coverage of list, calendar, and date/time requests.
 
+* Writing 300 more sentences on 12 Nov 2026 (SN-296 to SN-595): a fresh 100-sentence test set and 200 training sentences, with new wording, informal spelling, code-switching and some Karanga and Ndau words, and revising them after FDK's review.
+
 * Establishing consistent Shona wording, spelling, and sentence structure throughout the dataset.
 
 * Reviewing sentence meanings and their corresponding intent labels to improve linguistic accuracy.
@@ -64,11 +66,13 @@ The review responsibilities included:
 
 * Assessing whether sentence meanings were clear and appropriate for their assigned intent categories.
 
-* Independently reviewing all 295 sentences (including the 50 test examples) to ensure 100% review coverage and support fair evaluation.
+* Independently reviewing all 595 sentences (including both test sets) to ensure 100% review coverage and support fair evaluation.
+
+* Reviewing the 300 sentences added on 12 Nov in three rounds and recording every change (79 sentences changed, none rejected) in `review_log.csv`, including rewording test sentences that were too close to existing ones.
 
 * Identifying linguistic issues requiring clarification or correction.
 
-The dataset records FDK as the reviewer across all 295 records in `data/contribution.csv`.
+The dataset records FDK as the reviewer across all 595 records in `data/contribution.csv`.
 
 ## 2. AI-Tool Disclosure
 

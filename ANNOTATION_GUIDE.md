@@ -86,7 +86,7 @@ The Shona word *zuva* can refer to the sun/weather, a day, or a date depending o
 * `weather_query`: Weather conditions or sun intensity.
   * *Example:* `"Kuchava nezuva here mangwana masikati?"` $\rightarrow$ `weather_query` (SN-019)
 
-* `datetime_query`: Specific date or day of the week queries.
+* `datetime_query`: Questions about a date, a day of the week, or a time of day, including sunrise and sunset times.
   * *Example:* `"Zuva richabuda nenguvai mangwana?"` $\rightarrow$ `datetime_query` (SN-043)
 
 ### Rule 6: Music and Playlists

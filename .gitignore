@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 *.joblib
+!artifacts/v2/B_tuned_tfidf.joblib
 data/raw/
 .env
 secrets.toml

@@ -9,14 +9,18 @@ Strathmore NLP Hub Datathon 2026.
 | Primary language | Shona (`sn`) |
 | Track | Track A, intent classification (10 MASSIVE-aligned labels) |
 | GitHub | https://github.com/cypher-30/NLP-Datathon |
-| Frozen commit (data, model, final test) | `f5933d8c94809ad7c87e4cdc60be57688d97fc47` |
-| Final submission commit | the latest commit on `main` that contains this file (documentation only after `f5933d8`) |
-| Trained model | GitHub release `v1.0-final`: https://github.com/cypher-30/NLP-Datathon/releases/tag/v1.0-final (`model.joblib`, SHA-256 `29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d`) |
+| v1 frozen (data, model, test run 11 Nov) | `f5933d8c94809ad7c87e4cdc60be57688d97fc47` (tag `v1-frozen`) |
+| v2 fresh test frozen, before any model saw it | `05f2be9df160e16b170fcce0951dbefb5eb51f0e` (tag `fresh-test-frozen`) |
+| v2 model choice frozen (train CV + dev only) | `c8a335d9b3fde87dbd936d69450fc96a15e8790b` (tag `v2-selection-frozen`) |
+| v2 fresh-test results (run once, 12 Nov) | `0817e071895f6cd08c16bfebf9dc0b72dfc702be` (tag `v2-final`); the run itself was at `19f6401` |
+| Final submission commit | `<<FILL: full SHA of the final commit>>` |
+| v2 model (demo default) | `artifacts/v2/B_tuned_tfidf.joblib` in the repository, SHA-256 `9b9ccc9fb74e365827a32673a4dc9e0ffb6a67d1208fb09389e17d9c1d901152` |
+| v1 model | GitHub release `v1.0-final`: https://github.com/cypher-30/NLP-Datathon/releases/tag/v1.0-final (`model.joblib`, SHA-256 `29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d`) |
 | Demo recording | *link to be added* |
 
 ## Data v5 (current file; fresh test frozen 12 Nov 2026, before any model saw it)
 - File: `data/contribution.csv`, v5, 595 rows, SHA-256 `e347b077f941d9b98fe508eb1e1ac1a9a067bb1d1e36d44236d044562b7850ec`.
-- Added SN-296 to SN-595 (300 rows, `source_version` `2026-11-12`): 100 **fresh test** rows (SN-296 to SN-395, 10 per label) and 200 new train rows (20 per label). All written by `MUK`, independently reviewed by `FDK`, `original_human`, no AI.
+- Added SN-296 to SN-595 (300 rows, `source_version` `2026-11-12`): 100 **fresh test** rows (SN-296 to SN-395, 10 per label) and 200 new train rows (20 per label). All written by `MUK`, independently reviewed by `FDK`, `original_human`.
 - The 50 v1 test rows were **retired into train**, because their v1 results had already been seen. Dev is the same 50 rows as before. Split: 445 train / 50 dev / 100 test.
 - FDK's review changed 79 of the 300 new rows (29 test, 50 train) over three rounds; nothing was rejected. Every change, with before and after text and the reason, is in `review_log.csv`. The reasons: a sentence too close to an existing row, the same pattern with only a name changed, too many uses of *nyamusi*, and adding Karanga and Ndau words.
 - Near-duplicate check, done before any model was trained on v5: each fresh test row was compared with every older row and every new train row (character 2–5-gram TF-IDF cosine). The highest match is SN-356 vs SN-261 (both `lists_query`) at 0.76, below the 0.8 threshold, so it was kept unchanged. There are no near-pairs within the test set. The 360-row ChatGPT stress set could not be included in this check because those files are no longer available.
@@ -34,18 +38,22 @@ Strathmore NLP Hub Datathon 2026.
 - Code: the Strathmore starter kit's licence, `LICENSE_CODE.txt`. Our changes are listed in `README.md`.
 
 ## Results and metric files
-| Split | Accuracy | Macro-F1 | Majority baseline macro-F1 |
+| Model and test | Accuracy | Macro-F1 | Majority baseline macro-F1 |
 |---|---|---|---|
-| Dev | 0.920 | 0.919 | 0.018 |
-| Test (run once, 11 Nov 2026) | 0.800 | 0.799 | 0.018 |
+| v2 (tuned TF-IDF, v5 data), fresh test of 100, run once 12 Nov 2026 | 0.920 | 0.919 | 0.018 |
+| v1 (kit model, v4 data), same fresh test | 0.680 | 0.681 | 0.018 |
+| v1, its own test of 50, run once 11 Nov 2026 | 0.800 | 0.799 | 0.018 |
+| v1 dev (50) | 0.920 | 0.919 | 0.018 |
 
+- `artifacts/v2/selection.json` (all v2 candidates, CV and dev scores, model hashes), `artifacts/v2_ablation_v4data/selection.json`, `artifacts/train_v2_log.txt`
+- `artifacts/v2/test_metrics.json`, `artifacts/v2/test_predictions.csv`, `artifacts/v2/test_run.lock`, `artifacts/v2/compare_log.txt`
 - `artifacts/intent/dev_metrics.json`
 - `artifacts/intent/test_metrics.json`
 - `artifacts/intent/per_label_report.csv`
 - `artifacts/intent/test_predictions.csv`
 
 ## Documents
-`README.md` (overview, reproduction, results, error analysis), `DATA_CARD.md`, `DATA_PLAN.md`, `ANNOTATION_GUIDE.md`, `QUALITY.md`, `CONTRIBUTIONS.md` (team roles and AI-use statement).
+`README.md` (overview, reproduction, results, error analysis), `review_log.csv` (FDK review changes), `DATA_CARD.md`, `DATA_PLAN.md`, `ANNOTATION_GUIDE.md`, `QUALITY.md`, `CONTRIBUTIONS.md` (team roles and AI-use statement).
 
 ## Run the demo
 From the repository folder, with Python 3.10 or later:
@@ -54,15 +62,15 @@ From the repository folder, with Python 3.10 or later:
 python -m venv .venv
 .venv\Scripts\Activate.ps1          # macOS/Linux: source .venv/bin/activate
 python -m pip install -r requirements.txt
-python train.py --track intent --data data/contribution.csv   # or place the release's model.joblib in artifacts/intent/
-python -m streamlit run app_shona.py
+python -m streamlit run app_shona.py    # uses artifacts/v2/B_tuned_tfidf.joblib, included in the repository
 ```
 
 Open the local address Streamlit prints, type a Shona request and press **Understand**. Full commands, including validation and evaluation, are in `README.md`.
 
 ## Known unresolved issues
 - Whether a reviewer from outside the team (`FDK`) is eligible is still to be confirmed with the organisers.
-- `calendar_query` is the weakest label (test F1 0.444); calendar and list "set" vs "query" requests are often confused.
-- The demo refuses some valid requests (for example SN-100, SN-248 on test) and accepts some unsupported "cancel / remove / change" requests, because the model mostly ignores verbs. There is no "not supported" class.
+- v2's weakest label is `lists_createoradd` (fresh-test F1 0.78): list add requests phrased as statements are read as list queries. Mostly-English requests and words never seen in training are also weak. v1's weakest label was `calendar_query` (F1 0.444 on its test).
+- The demo can accept unsupported "cancel / remove / change" requests on supported topics, because there is no "not supported" class.
+- The freeze commits and tags were pushed to GitHub after the fresh-test run, so the order (test frozen, then model chosen, then test scored) rests on the local commit history, not on GitHub's timestamps.
 - Each row's `licence_or_permission` field holds the original authorization text; the dataset licence (CC BY 4.0) is stated in `DATA_CARD.md`. Edits to the CSV after the v1 test run: the `source_version` correction and the v5 additions, both described under Data.
 - One writer (`MUK`) and one reviewer (`FDK`) for all 595 rows, including the fresh test, so the test does not measure how the model copes with other writers.
