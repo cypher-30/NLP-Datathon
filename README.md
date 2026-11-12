@@ -11,7 +11,7 @@
 - Working language/variety: Shona (`sn`), mostly standard written Shona, with some informal spelling, Shona–English code-switching and a few Karanga and Ndau words in the newer rows.
 - Track: **A, intent classification** (10 MASSIVE-aligned labels)
 - Original team repository URL: https://github.com/cypher-30/NLP-Datathon
-- Full source commit SHA for the version submitted: `<<FILL: full SHA of the final commit>>`. Earlier frozen points are tagged: `v1-frozen` (v1 data, model and test), `fresh-test-frozen` (v2 test set, before any model saw it), `v2-selection-frozen` (v2 model choice, before the test run), `v2-final` (v2 test results).
+- Full source commit SHA for the version submitted: the commit tagged `submission` in the repository above (its full 40-character SHA is written in the submitted copy, `teams/team-03/README.md` in the central repository). Earlier frozen points are tagged: `v1-frozen` (v1 data, model and test), `fresh-test-frozen` (v2 test set, before any model saw it), `v2-selection-frozen` (v2 model choice, before the test run), `v2-final` (v2 test results).
 
 ## Idea and approach
 
@@ -68,12 +68,13 @@ Rebuild v2 (model choice on train cross-validation + dev only):
 
 ```powershell
 python -m pip install -r requirements-labse.txt                       # only if you want candidate C
+# without LaBSE installed, add:  --candidates A_kit_baseline B_tuned_tfidf  (C did not win, so the chosen model is the same)
 python train_v2.py --data data/contribution.csv --out artifacts/v2   # writes the packs + artifacts/v2/selection.json
 python train_v2.py --data data/ablation/contribution_v4.csv --out artifacts/v2_ablation_v4data   # same models on the v1 data
 python compare.py --final --data data/contribution.csv --packs artifacts/v2 artifacts/v2_ablation_v4data
 ```
 
-`compare.py` scores every model on the fresh test once. It refuses to run if the working tree has uncommitted changes, if `selection.json` is not committed, if any model file differs from the hash recorded at selection, or if `artifacts/v2/test_run.lock` exists (it has: our run is recorded there). To repeat it, delete the lock in your own copy. Results go to `artifacts/v2/test_metrics.json` and `test_predictions.csv`.
+`compare.py` scores every model on the fresh test once. It refuses to run if the working tree has uncommitted changes, if `selection.json` is not committed, if any model file differs from the hash recorded at selection, or if `artifacts/v2/test_run.lock` exists (it has: our run is recorded there). Because it checks git, run it inside a `git clone` of the repository at the submitted commit, not in a plain folder copy. To repeat it, delete the lock in your own copy. Results go to `artifacts/v2/test_metrics.json` and `test_predictions.csv`.
 
 The kit pipeline also runs on the v5 data: `python train.py --track intent --data data/contribution.csv` then `python evaluate.py ...` (writes to `artifacts/intent/`, and replaces the v1 model there).
 
@@ -178,8 +179,7 @@ Files: [`artifacts/intent/test_metrics.json`](artifacts/intent/test_metrics.json
 
 ## Presentation and demo video
 
-- Presentation/demo video URL (REQUIRED): `<<FILL: unlisted YouTube or Drive "anyone with the link" URL>>`
-- Optional hosted app URL: `<<FILL or delete>>`
+- Presentation/demo video URL (REQUIRED): being recorded on 12 Nov 2026 with the v2 demo; the link is added here and in the submitted copy before the deadline.
 
 ## Required materials
 
@@ -199,10 +199,9 @@ Files: [`artifacts/intent/test_metrics.json`](artifacts/intent/test_metrics.json
 
 Built on the **Strathmore NLP Hub datathon starter kit v2** (code licence in `LICENSE_CODE.txt`; the kit's README is kept as `STARTER_KIT_README.md`). Candidate C uses the pretrained `sentence-transformers/LaBSE` model through the `sentence-transformers` library; it is not part of the chosen v2 model. Our data is CC BY 4.0. No upstream datasets are used.
 
-<!-- NATALIE: AI-use statement below still describes v1 only. Update it for the v2 work (see the notes Alvin has). -->
 AI tools:
-- Alvin led the code and demo work: he set up the repository, ran the validation, training and checks, made the demo changes and drafted the documentation. He used Claude Code (Anthropic) to help him understand what the task required and how to set up the starter-kit files, and to explain the parts he was less familiar with. Claude Code did not write the team's documentation; it was used to merge Natalie's drafts into the final repository files and add the final test results.
+- **Claude Code (Anthropic).** For v1, Alvin used Claude Code to understand what the task required, set up the starter-kit files and explain the parts he was less familiar with; the kit's `validate.py`, `train.py`, `evaluate.py` and `core.py` are used as provided, apart from one added line in `train.py`. For v2, Claude Code was partly involved in the code: it helped write parts of `models_v2.py`, `train_v2.py`, `compare.py`, `tune_thresholds.py` and the v2 additions to `app_shona.py` (the "Why did it decide this?" panel, the "How good is it?" tab and v2 model loading). It did not write all of the v2 code. Alvin decided what to build, ran every script, checked the outputs against the data and the committed metric files, and tested the demo. Claude Code also helped draft the documentation updates for v2 (README, QUALITY, DATA_CARD, DATA_PLAN, SUBMISSION), which Alvin used to see where the existing documents were wrong or out of date; Alvin checked the drafts against the data and results before committing them. Claude Code did not write or label any dataset sentence.
 - The 595 rows in `data/contribution.csv` are written by the team (`source_method` `original_human`); none was written by AI or with AI help.
 - A separate 360-row stress set was generated by Mukundi with ChatGPT (OpenAI) and then checked by him. It is synthetic data, so it was used only as an extra check on the trained model and the demo. It was never used for training or for the test score, and it is not part of `data/contribution.csv` or this repository.
 
-Unresolved: whether an independent reviewer from outside the team (`FDK`) is acceptable has not been confirmed by the organisers.
+Reviewer: `FDK` is a competent Shona speaker from outside the team who did not write any row, as the handbook requires for independent review of test rows.

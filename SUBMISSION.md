@@ -13,10 +13,10 @@ Strathmore NLP Hub Datathon 2026.
 | v2 fresh test frozen, before any model saw it | `05f2be9df160e16b170fcce0951dbefb5eb51f0e` (tag `fresh-test-frozen`) |
 | v2 model choice frozen (train CV + dev only) | `c8a335d9b3fde87dbd936d69450fc96a15e8790b` (tag `v2-selection-frozen`) |
 | v2 fresh-test results (run once, 12 Nov) | `0817e071895f6cd08c16bfebf9dc0b72dfc702be` (tag `v2-final`); the run itself was at `19f6401` |
-| Final submission commit | `<<FILL: full SHA of the final commit>>` |
+| Final submission commit | the commit tagged `submission` (full SHA in the submitted copy, `teams/team-03/README.md`) |
 | v2 model (demo default) | `artifacts/v2/B_tuned_tfidf.joblib` in the repository, SHA-256 `9b9ccc9fb74e365827a32673a4dc9e0ffb6a67d1208fb09389e17d9c1d901152` |
 | v1 model | GitHub release `v1.0-final`: https://github.com/cypher-30/NLP-Datathon/releases/tag/v1.0-final (`model.joblib`, SHA-256 `29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d`) |
-| Demo recording | *link to be added* |
+| Demo recording | being recorded 12 Nov 2026; link in `README.md` (Presentation and demo video) |
 
 ## Data v5 (current file; fresh test frozen 12 Nov 2026, before any model saw it)
 - File: `data/contribution.csv`, v5, 595 rows, SHA-256 `e347b077f941d9b98fe508eb1e1ac1a9a067bb1d1e36d44236d044562b7850ec`.
@@ -68,7 +68,7 @@ python -m streamlit run app_shona.py    # uses artifacts/v2/B_tuned_tfidf.joblib
 Open the local address Streamlit prints, type a Shona request and press **Understand**. Full commands, including validation and evaluation, are in `README.md`.
 
 ## Known unresolved issues
-- Whether a reviewer from outside the team (`FDK`) is eligible is still to be confirmed with the organisers.
+- Reviewer `FDK` is a competent Shona speaker from outside the team who did not write any row, which meets the handbook's rule for independent test review.
 - v2's weakest label is `lists_createoradd` (fresh-test F1 0.78): list add requests phrased as statements are read as list queries. Mostly-English requests and words never seen in training are also weak. v1's weakest label was `calendar_query` (F1 0.444 on its test).
 - The demo can accept unsupported "cancel / remove / change" requests on supported topics, because there is no "not supported" class.
 - The freeze commits and tags were pushed to GitHub after the fresh-test run, so the order (test frozen, then model chosen, then test scored) rests on the local commit history, not on GitHub's timestamps.

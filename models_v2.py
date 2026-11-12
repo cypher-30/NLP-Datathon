@@ -1,7 +1,7 @@
 """Team Ubuntu v2 model candidates (intent track). Used by train_v2.py, compare.py and app_shona.py.
 
 A  kit baseline:  char TF-IDF (2-5) + logistic regression, identical to the kit's train.py
-B  tuned TF-IDF:  word (1-2) + char_wb (2-5) TF-IDF + logistic regression, settings chosen by cross-validation
+B  tuned TF-IDF:  word (1-gram or 1-2-gram, picked by CV) + char_wb (2-5) TF-IDF + logistic regression, settings chosen by cross-validation
 C  LaBSE:         multilingual sentence embeddings (sentence-transformers/LaBSE, covers Shona 'sn') + logistic regression
 """
 import numpy as np

@@ -4,8 +4,6 @@
 
 ### 1.1 Alvin Murithi — Technical Development and Model Implementation
 
-<!-- NATALIE: check these bullets match the AI-use statement in section 2 for the v2 code. -->
-
 Alvin led the technical development and implementation of the Shona intent classification system.
 
 His contributions included:
@@ -21,6 +19,8 @@ His contributions included:
 * Conducting duplicate detection, cross-split similarity checks, and robustness testing.
 
 * Developing the Streamlit demonstration application (`app_shona.py`), including intent predictions and unsupported-request handling.
+
+* Building the v2 comparison (three candidate models chosen on train and dev only, one fresh-test run), with Claude Code's help as described in section 2.
 
 ### 1.2 Mukundi Witness Chingwena — Shona Language Lead and Dataset Development
 
@@ -78,13 +78,17 @@ The dataset records FDK as the reviewer across all 595 records in `data/contribu
 
 ## 2. AI-Tool Disclosure
 
-<!-- NATALIE: this section describes v1 only; update for the v2 work (see the notes Alvin has). -->
-
 None of the 595 sentences in `data/contribution.csv` was written by AI or with AI help.
 
 ### Claude Code — Anthropic
 
-Alvin led the code and demo work: he set up the repository, ran the validation, training and checks, and made the demo changes. He used Claude Code (Anthropic) to help him understand what the task required and how to set up the starter-kit files, and to explain the parts he was less familiar with, such as how the kit's `train.py` and `evaluate.py` work. The kit's `validate.py`, `train.py`, `evaluate.py` and `core.py` are used as provided, except for one added line in `train.py` (see `README.md`). Claude Code did not write any of the 295 dataset sentences or their labels.
+**v1.** Alvin led the code and demo work: he set up the repository, ran the validation, training and checks, and made the demo changes. He used Claude Code (Anthropic) to help him understand what the task required and how to set up the starter-kit files, and to explain the parts he was less familiar with, such as how the kit's `train.py` and `evaluate.py` work. The kit's `validate.py`, `train.py`, `evaluate.py` and `core.py` are used as provided, except for one added line in `train.py` (see `README.md`).
+
+**v2.** Claude Code was partly involved in the v2 code. It helped write parts of `models_v2.py`, `train_v2.py`, `compare.py`, `tune_thresholds.py` and the v2 additions to `app_shona.py` (the "Why did it decide this?" panel, the "How good is it?" tab and v2 model loading); it did not write all of the v2 code. Alvin decided what to build, ran every script, checked the outputs against the data and the committed metric files, and tested the demo.
+
+**Documentation.** Claude Code helped draft the documentation updates for v2 (`README.md`, `QUALITY.md`, `DATA_CARD.md`, `DATA_PLAN.md`, `SUBMISSION.md`), which Alvin used to see where the existing documents were wrong or out of date. Alvin checked the drafts against the data and results before committing them.
+
+Claude Code did not write or label any of the 595 dataset sentences.
 
 ### ChatGPT — OpenAI
 
