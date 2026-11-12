@@ -56,7 +56,7 @@ Practice run (English teaching data, not our result): add `--practice` and use `
 ## Demo behaviour
 - Confident match: "It looks like you want: <action>", plus what the assistant would do and two other possibilities.
 - Weak match: "I am not sure, but it looks like you want: <action>".
-- Unrecognised input: "Sorry, I don't think I can help with that". This happens when the model's top confidence is below 0.16 or the text's similarity to every training sentence is below 0.28. The thresholds were chosen on dev rows and off-topic probes, never on the test split.
+- Unrecognised input: "Sorry, I don't think I can help with that". This happens when the model's top confidence is below 0.25 or the text's similarity to every training sentence is below 0.22 (values for the v2 model; `tune_thresholds.py`). The thresholds were chosen on dev rows and 16 English off-topic probes, never on the test split. With them, no dev row and all 16 probes are refused.
 - The demo never performs real actions.
 
 ## Results

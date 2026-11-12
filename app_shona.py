@@ -16,9 +16,9 @@ from core import FRIENDLY, INTENTS
 from models_v2 import explain_words  # also makes v2 packs unpicklable-safe (their classes live there)
 
 # Thresholds were chosen by looking at DEV rows and off-topic probes, never the test split.
-MIN_SIMILARITY = 0.28   # below this the text looks unlike any training sentence -> unsupported
-MIN_CONFIDENCE = 0.16   # below this the model is basically guessing -> unsupported
-SURE_CONFIDENCE = 0.22  # below this (but above MIN) we show the answer as "not sure"
+MIN_SIMILARITY = 0.22   # below this the text looks unlike any training sentence -> unsupported (see tune_thresholds.py)
+MIN_CONFIDENCE = 0.25   # below this the model is basically guessing -> unsupported
+SURE_CONFIDENCE = 0.35  # below this (but above MIN) we show the answer as "not sure"
 
 WHAT_HAPPENS = {
     'weather_query': 'would look up the weather forecast for you.',
