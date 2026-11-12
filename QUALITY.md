@@ -22,6 +22,28 @@ Language quality and orthographic correctness were prioritized throughout datase
 * **No AI-written rows:** All 295 records are `original_human`. None of the 295 sentences was written by AI or with AI help.
 * **Review Provenance:** Every row in `data/contribution.csv` is explicitly marked as `independently_reviewed` with `FDK` recorded as the verifying reviewer.
 
+### Review log: corrections made by FDK
+
+Mukundi (`MUK`) wrote the draft sentences, and FDK reviewed them for wording, grammar, vocabulary, naturalness and whether the intent was kept. For the 75 first-batch sentences in `alarm_set`, `calendar_query` and `datetime_query` (25 each), FDK's review record shows:
+
+| Outcome | Sentences |
+|---|---|
+| Kept unchanged | 63 |
+| Changed | 12 |
+| Rejected | 0 |
+
+Examples of FDK's changes (the "after" text is the sentence now in `data/contribution.csv`):
+
+| Record | Label | Before review | After review |
+|---|---|---|---|
+| SN-052 | alarm_set | Isa alarm na5:30 mangwanani. | Isa alarm ya5:30 mangwanani. |
+| SN-058 | alarm_set | Ndikaisire alarm na8 manheru ano. | Ndikaisire alarm ye8 manheru ano. |
+| SN-069 | alarm_set | Ndimutse na7 mangwanani eSvondo yega yega. | Ndimutse na7 mangwanani eSvondo ega ega. |
+| SN-106 | calendar_query | Tarisa kana ndine chidzidzo masikati ano. | Tarisa kana ndine clasi masikati ano. |
+| SN-039 | datetime_query | Inguvai muBulawayo pari zvino? | Inguvai muBulawayo izvezvi? |
+
+The changes were mainly word choice, phrasing and grammatical agreement; no label changed. The review records for the other seven labels and for the 45 rows added on 9–10 Nov are not included here, so for those rows the evidence is the `reviewer_code` and `review_status` columns only.
+
 The annotation process adhered strictly to the guidelines defined in [`ANNOTATION_GUIDE.md`](ANNOTATION_GUIDE.md) to maintain clear label boundaries across overlapping categories.
 
 ## 3. Data Cleaning and Leakage Prevention
