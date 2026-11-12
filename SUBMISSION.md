@@ -15,7 +15,8 @@ Strathmore NLP Hub Datathon 2026.
 | Demo recording | *link to be added* |
 
 ## Data
-- File: `data/contribution.csv`, v4, SHA-256 `5eb442f7ba66e330b47cb6bc7db406b22eb543107d93adb80bf659a09cd30160`.
+- File: `data/contribution.csv`, v4, SHA-256 `974c50c5808129539867611aa8b511fcaae8ce4eee9ebe78bac5c0de1629e49e`.
+- Metadata correction after the final test (12 Nov 2026): the 37 rows added on 9–10 Nov that still carried `source_version` `2026-11-08-draft` (SN-251 to SN-295, except the 8 marked `2026-11-10-reword`) now carry `2026-11-10-added`, the date they were committed. Only that column changed: text, labels, splits and group IDs are identical, so the model and all results are unchanged. The file as trained and tested at `f5933d8` had SHA-256 `5eb442f7ba66e330b47cb6bc7db406b22eb543107d93adb80bf659a09cd30160`.
 - 295 Shona sentences, 10 labels. Split: 195 train / 50 dev / 50 test (5 dev and 5 test per label; 15 to 27 train per label).
 - All rows `original_human`, written by `MUK`, independently reviewed by `FDK`. No AI-written rows. No external datasets.
 - A separate 360-sentence stress set (generated with ChatGPT, checked by Mukundi) was used only as an extra check. It is not in the dataset or the repository.
@@ -55,5 +56,5 @@ Open the local address Streamlit prints, type a Shona request and press **Unders
 - Whether a reviewer from outside the team (`FDK`) is eligible is still to be confirmed with the organisers.
 - `calendar_query` is the weakest label (test F1 0.444); calendar and list "set" vs "query" requests are often confused.
 - The demo refuses some valid requests (for example SN-100, SN-248 on test) and accepts some unsupported "cancel / remove / change" requests, because the model mostly ignores verbs. There is no "not supported" class.
-- Each row's `licence_or_permission` field holds the original authorization text; the dataset licence (CC BY 4.0) is stated in `DATA_CARD.md`. The CSV was not edited after the final test run so that the model fingerprint stays valid.
+- Each row's `licence_or_permission` field holds the original authorization text; the dataset licence (CC BY 4.0) is stated in `DATA_CARD.md`. The only edit to the CSV after the final test run is the `source_version` correction described under Data.
 - One writer, one reviewer, mostly formal spelling, little dialect variation or code-switching.
