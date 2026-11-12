@@ -54,6 +54,8 @@ pack, model_name = load_pack()
 if pack is None:
     st.info('Train a model first: python train_v2.py --data data/contribution.csv')
     st.stop()
+if model_name.startswith('v1'):  # v1's probabilities are flatter; keep the thresholds it was tuned with
+    MIN_SIMILARITY, MIN_CONFIDENCE, SURE_CONFIDENCE = 0.28, 0.16, 0.22
 model = pack['model']
 sim_vec = pack.get('sim_vectorizer') or model.steps[0][1]  # v1 packs reuse the classifier's own vectoriser
 train_matrix = pack.get('train_matrix')
