@@ -29,9 +29,10 @@ FDK reviewed the new sentences in three rounds. Every change is recorded in [`re
 |---|---:|---:|---:|
 | Kept unchanged | 71 | 150 | 221 |
 | Changed | 29 | 50 | 79 |
-| Rejected | 0 | 0 | 0 |
 
-Four rows were changed twice (SN-354, SN-364, SN-549, SN-554; the in-between wording was not recorded) and SN-376 was changed in Round 1 and again in Round 3. No label was changed.
+FDK's notes list the changes only: no rejected sentences and no label changes were recorded.
+
+Four rows were changed twice (SN-354, SN-364, SN-549, SN-554; the in-between wording was not recorded) and SN-376 was changed in Round 1 and again in Round 3.
 
 The reasons for the changes:
 

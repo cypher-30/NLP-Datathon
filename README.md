@@ -45,7 +45,7 @@ Reused: the starter kit's `validate.py`, `train.py` (one added line), `evaluate.
 
 - How the dataset grew: SN-001 to SN-250 (first set), SN-251 to SN-295 (45 train rows for list, calendar and date/time wording, 9–10 Nov), SN-296 to SN-595 (100 fresh test rows and 200 train rows, 12 Nov). The 50 v1 test rows were moved to train after v1's single test run (`SUBMISSION.md` records the v4 file and its hash).
 - All rows `original_human`, written by `MUK`, reviewed by `FDK` (`independently_reviewed`; the reviewer never wrote the rows they reviewed). No external datasets.
-- Review evidence: [`review_log.csv`](review_log.csv) lists every change FDK made to the 300 newest rows: 79 rows changed (29 test, 50 train) over three rounds, none rejected, each with the text before and after and the reason. For the first 75 rows of three labels, [`QUALITY.md`](QUALITY.md) records 63 kept and 12 changed.
+- Review evidence: [`review_log.csv`](review_log.csv) lists every change FDK made to the 300 newest rows: 79 rows changed (29 test, 50 train) over three rounds, each with the text before and after and the reason. For the first 75 rows of three labels, [`QUALITY.md`](QUALITY.md) records 63 kept and 12 changed.
 - Quality checks: the organisers' `validate.py` passes (non-practice). Each fresh test row was compared with every older row and every new training row (character 2–5-gram TF-IDF cosine); the highest match is 0.76 and none reach 0.8. No dev row is within 0.8 of any training row. No `group_id` spans two splits.
 - Data licence: CC BY 4.0. Permission evidence is kept privately, outside this repository.
 
@@ -79,7 +79,7 @@ The kit pipeline also runs on the v5 data: `python train.py --track intent --dat
 
 Model files:
 - v2 winner: [`artifacts/v2/B_tuned_tfidf.joblib`](artifacts/v2/B_tuned_tfidf.joblib), SHA-256 `9b9ccc9fb74e365827a32673a4dc9e0ffb6a67d1208fb09389e17d9c1d901152` (also recorded in `artifacts/v2/selection.json`).
-- v1: GitHub release `v1.0-final`, https://github.com/cypher-30/NLP-Datathon/releases/tag/v1.0-final (`model.joblib`, SHA-256 `29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d`). Put it at `artifacts/intent/model.joblib`.
+- v1: [`artifacts/intent/model.joblib`](artifacts/intent/model.joblib) (in the repository; also GitHub release `v1.0-final`, https://github.com/cypher-30/NLP-Datathon/releases/tag/v1.0-final), SHA-256 `29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d`. `compare.py` checks this hash.
 - Only load `.joblib` files from a source you trust.
 
 ## Results and limitations
@@ -197,7 +197,7 @@ Files: [`artifacts/intent/test_metrics.json`](artifacts/intent/test_metrics.json
 
 ## Attribution and permissions
 
-Built on the **Strathmore NLP Hub datathon starter kit v2** (code licence in `LICENSE_CODE.txt`; the kit's README is kept as `STARTER_KIT_README.md`). Candidate C uses the pretrained `sentence-transformers/LaBSE` model (Apache 2.0) through the `sentence-transformers` library; it is not part of the chosen v2 model. Our data is CC BY 4.0. No upstream datasets are used.
+Built on the **Strathmore NLP Hub datathon starter kit v2** (code licence in `LICENSE_CODE.txt`; the kit's README is kept as `STARTER_KIT_README.md`). Candidate C uses the pretrained `sentence-transformers/LaBSE` model through the `sentence-transformers` library; it is not part of the chosen v2 model. Our data is CC BY 4.0. No upstream datasets are used.
 
 <!-- NATALIE: AI-use statement below still describes v1 only. Update it for the v2 work (see the notes Alvin has). -->
 AI tools:

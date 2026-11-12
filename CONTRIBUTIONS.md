@@ -70,7 +70,7 @@ The review responsibilities included:
 
 * Independently reviewing all 595 sentences (including both test sets) to ensure 100% review coverage and support fair evaluation.
 
-* Reviewing the 300 sentences added on 12 Nov in three rounds and recording every change (79 sentences changed, none rejected) in `review_log.csv`, including rewording test sentences that were too close to existing ones.
+* Reviewing the 300 sentences added on 12 Nov in three rounds and recording every change (79 sentences changed) in `review_log.csv`, including rewording test sentences that were too close to existing ones.
 
 * Identifying linguistic issues requiring clarification or correction.
 
