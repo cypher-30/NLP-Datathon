@@ -4,6 +4,8 @@
 
 ### 1.1 Alvin Murithi — Technical Development and Model Implementation
 
+<!-- NATALIE: check these bullets match the AI-use statement in section 2 for the v2 code. -->
+
 Alvin led the technical development and implementation of the Shona intent classification system.
 
 His contributions included:
@@ -75,6 +77,8 @@ The review responsibilities included:
 The dataset records FDK as the reviewer across all 595 records in `data/contribution.csv`.
 
 ## 2. AI-Tool Disclosure
+
+<!-- NATALIE: this section describes v1 only; update for the v2 work (see the notes Alvin has). -->
 
 None of the 295 sentences in `data/contribution.csv` was written by AI or with AI help.
 
