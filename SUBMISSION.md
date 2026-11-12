@@ -16,7 +16,7 @@ Strathmore NLP Hub Datathon 2026.
 | Final submission commit | the commit tagged `submission` (full SHA in the submitted copy, `teams/team-03/README.md`) |
 | v2 model (demo default) | `artifacts/v2/B_tuned_tfidf.joblib` in the repository, SHA-256 `9b9ccc9fb74e365827a32673a4dc9e0ffb6a67d1208fb09389e17d9c1d901152` |
 | v1 model | GitHub release `v1.0-final`: https://github.com/cypher-30/NLP-Datathon/releases/tag/v1.0-final (`model.joblib`, SHA-256 `29f4510b2cef49556960f558d9a3f38ef44d83f897943275c71f2c45d853995d`) |
-| Demo recording | being recorded 12 Nov 2026; link in `README.md` (Presentation and demo video) |
+| Demo recording | https://youtu.be/1XBkKl0vRNM (unlisted YouTube; see the note in `README.md` about the 0.80 figure at 3:09) |
 
 ## Data v5 (current file; fresh test frozen 12 Nov 2026, before any model saw it)
 - File: `data/contribution.csv`, v5, 595 rows, SHA-256 `e347b077f941d9b98fe508eb1e1ac1a9a067bb1d1e36d44236d044562b7850ec`.

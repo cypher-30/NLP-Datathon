@@ -179,7 +179,8 @@ Files: [`artifacts/intent/test_metrics.json`](artifacts/intent/test_metrics.json
 
 ## Presentation and demo video
 
-- Presentation/demo video URL (REQUIRED): being recorded on 12 Nov 2026 with the v2 demo; the link is added here and in the submitted copy before the deadline.
+- Presentation/demo video URL (REQUIRED): https://youtu.be/1XBkKl0vRNM (4:58, presented by Mukundi; covers the problem, data, demo on new Shona input including one wrong answer and one refusal, results, limitations and who did what).
+- Note: at 3:09 the presenter reads 0.80, which is v1's score on its original 50-sentence test; the on-screen caption corrects it. The v2 fresh-test result is 0.920 accuracy / 0.919 macro-F1.
 
 ## Required materials
 
@@ -192,7 +193,7 @@ Files: [`artifacts/intent/test_metrics.json`](artifacts/intent/test_metrics.json
 - Evaluation outputs and baseline comparison: [`artifacts/v2/`](artifacts/v2/) (v2 and v1 on the fresh test) and [`artifacts/intent/`](artifacts/intent/) (v1 original test)
 - Runnable code and dependency file: `validate.py`, `train.py`, `evaluate.py`, `core.py`, `models_v2.py`, `train_v2.py`, `compare.py`, `tune_thresholds.py`, `app_shona.py`, [`requirements.txt`](requirements.txt), [`requirements-labse.txt`](requirements-labse.txt)
 - Trained artefacts or reproduction instructions: `artifacts/v2/B_tuned_tfidf.joblib` (in the repository), release `v1.0-final` (link above), or the commands above
-- Video link: see above
+- Video link: https://youtu.be/1XBkKl0vRNM
 - Submission manifest: [`SUBMISSION.md`](SUBMISSION.md)
 
 ## Attribution and permissions
