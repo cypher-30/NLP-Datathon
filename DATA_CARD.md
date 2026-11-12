@@ -34,8 +34,7 @@ Each record contains a sentence, its intent label, and metadata describing its o
 
 The Shona examples were prepared by Mukundi Witness Chingwena (contributor code `MUK`). The dataset records an independent language reviewer identified by code `FDK`, who reviewed every sentence. FDK's changes to the 300 newest sentences are listed in [`review_log.csv`](review_log.csv).
 
-<!-- NATALIE: data AI-use statement. Confirm with Mukundi that SN-296 to SN-595 were written without AI before changing 295 to 595. -->
-All 595 records have the source method `original_human`. **None of the 295 sentences was written by AI or with AI help.**
+All 595 records have the source method `original_human`. **None of the 595 sentences was written by AI or with AI help.**
 
 No external datasets are included in the counted contribution.
 

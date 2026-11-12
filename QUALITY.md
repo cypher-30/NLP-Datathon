@@ -17,8 +17,7 @@ The current file passes all of these checks. `validate.py` does not check langua
 
 * **100% Independent Review:** All 595 records (training, development and test) were reviewed by a Shona speaker who did not write them (reviewer code `FDK`). Mukundi (`MUK`) wrote every sentence.
 * **Evaluation Scope:** The review checked natural phrasing, Shona spelling, grammar, and whether the sentence clearly expresses one intent.
-<!-- NATALIE: the next bullet is a data AI-use statement. Mukundi must confirm whether the 300 rows added on 12 Nov (SN-296 to SN-595) were written without AI before it is changed from 295 to 595. -->
-* **No AI-written rows:** All 295 records are `original_human`. None of the 295 sentences was written by AI or with AI help.
+* **No AI-written rows:** All 595 records are `original_human`. None of the 595 sentences was written by AI or with AI help (confirmed by Mukundi for the 300 sentences added on 12 Nov).
 * **Review Provenance:** Every row in `data/contribution.csv` is marked `independently_reviewed` with `FDK` as the reviewer.
 
 ### Review log: the 300 sentences added on 12 Nov (SN-296 to SN-595)

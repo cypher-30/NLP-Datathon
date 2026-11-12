@@ -4,14 +4,14 @@
 
 To solve the lack of training data for Shona intent classification, we built our own dataset from scratch. We first collected a baseline set of native Shona sentences covering all ten required datathon intent categories. 
 
-After testing our initial model and reviewing errors, we added 45 more training sentences to improve how well the model handles list queries, calendar questions, and date/time expressions. This brought the dataset to **295 sentences** (v4), which was used for our first model (v1). <!-- NATALIE: data AI-use sentence; see the note in DATA_CARD.md --> None of the 295 sentences was written by AI or with AI help.
+After testing our initial model and reviewing errors, we added 45 more training sentences to improve how well the model handles list queries, calendar questions, and date/time expressions. This brought the dataset to **295 sentences** (v4), which was used for our first model (v1). None of these sentences was written by AI or with AI help.
 
 After v1's single test run on 11 Nov, we could no longer use its 50 test sentences to judge a new model fairly, because we had seen its results. On 12 Nov Mukundi wrote **300 more sentences** (SN-296 to SN-595), which FDK reviewed:
 
 - **100 fresh test sentences**, 10 per intent, with new wording, names and places, some informal spelling and code-switching. They were checked for near-copies of every older sentence and committed before any model was trained on them.
 - **200 training sentences**, 20 per intent, with list words other than *runyorwa* (for example *rondedzero*, *zvekuita*, *zvandichatenga*), calendar questions in different forms, and a few Karanga and Ndau words.
 
-The final dataset (v5) has **595 sentences**.
+The final dataset (v5) has **595 sentences**. None of the 300 new sentences was written by AI or with AI help either.
 
 A separate 360-sentence stress set was generated with ChatGPT and checked by Mukundi. It was used only to find weaknesses in the model and demo. It was not copied into the dataset, and it was not used for training or for the test score.
 

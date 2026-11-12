@@ -80,7 +80,7 @@ The dataset records FDK as the reviewer across all 595 records in `data/contribu
 
 <!-- NATALIE: this section describes v1 only; update for the v2 work (see the notes Alvin has). -->
 
-None of the 295 sentences in `data/contribution.csv` was written by AI or with AI help.
+None of the 595 sentences in `data/contribution.csv` was written by AI or with AI help.
 
 ### Claude Code — Anthropic
 

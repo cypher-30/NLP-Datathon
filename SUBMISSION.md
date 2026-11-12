@@ -20,7 +20,7 @@ Strathmore NLP Hub Datathon 2026.
 
 ## Data v5 (current file; fresh test frozen 12 Nov 2026, before any model saw it)
 - File: `data/contribution.csv`, v5, 595 rows, SHA-256 `e347b077f941d9b98fe508eb1e1ac1a9a067bb1d1e36d44236d044562b7850ec`.
-- Added SN-296 to SN-595 (300 rows, `source_version` `2026-11-12`): 100 **fresh test** rows (SN-296 to SN-395, 10 per label) and 200 new train rows (20 per label). All written by `MUK`, independently reviewed by `FDK`, `original_human`.
+- Added SN-296 to SN-595 (300 rows, `source_version` `2026-11-12`): 100 **fresh test** rows (SN-296 to SN-395, 10 per label) and 200 new train rows (20 per label). All written by `MUK`, independently reviewed by `FDK`, `original_human`; none written by AI or with AI help (confirmed by Mukundi).
 - The 50 v1 test rows were **retired into train**, because their v1 results had already been seen. Dev is the same 50 rows as before. Split: 445 train / 50 dev / 100 test.
 - FDK's review changed 79 of the 300 new rows (29 test, 50 train) over three rounds (no rejections or label changes were recorded). Every change, with before and after text and the reason, is in `review_log.csv`. The reasons: a sentence too close to an existing row, the same pattern with only a name changed, too many uses of *nyamusi*, and adding Karanga and Ndau words.
 - Near-duplicate check, done before any model was trained on v5: each fresh test row was compared with every older row and every new train row (character 2–5-gram TF-IDF cosine). The highest match is SN-356 vs SN-261 (both `lists_query`) at 0.76, below the 0.8 threshold, so it was kept unchanged. There are no near-pairs within the test set. The 360-row ChatGPT stress set could not be included in this check because those files are no longer available.
