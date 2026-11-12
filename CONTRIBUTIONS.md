@@ -76,7 +76,7 @@ None of the 295 sentences in `data/contribution.csv` was written by AI or with A
 
 ### Claude Code — Anthropic
 
-Alvin led the code and demo work: he set up the repository, ran the validation, training and checks, and made the demo changes. He used Claude Code (Anthropic) to help him understand what the task required and how to set up the starter-kit files, and to explain the parts he was less familiar with, such as how the kit's `train.py` and `evaluate.py` work. The kit's `validate.py`, `train.py`, `evaluate.py` and `core.py` are used as provided, except for one added line in `train.py` (see `README.md`). Claude Code did not write any of the 295 dataset sentences or their labels. On 12 Nov, Claude Code drafted the corrections to this paragraph, the review-log section in `QUALITY.md` and the data note in `SUBMISSION.md`, from facts Alvin and the team supplied; Alvin checked them.
+Alvin led the code and demo work: he set up the repository, ran the validation, training and checks, and made the demo changes. He used Claude Code (Anthropic) to help him understand what the task required and how to set up the starter-kit files, and to explain the parts he was less familiar with, such as how the kit's `train.py` and `evaluate.py` work. The kit's `validate.py`, `train.py`, `evaluate.py` and `core.py` are used as provided, except for one added line in `train.py` (see `README.md`). Claude Code did not write any of the 295 dataset sentences or their labels.
 
 ### ChatGPT — OpenAI
 
