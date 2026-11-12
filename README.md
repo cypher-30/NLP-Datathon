@@ -180,6 +180,7 @@ Files: [`artifacts/intent/test_metrics.json`](artifacts/intent/test_metrics.json
 ## Presentation and demo video
 
 - Presentation/demo video URL (REQUIRED): https://youtu.be/1XBkKl0vRNM (4:58, presented by Mukundi; covers the problem, data, demo on new Shona input including one wrong answer and one refusal, results, limitations and who did what).
+- Hosted app (optional, same v2 model): https://ubuntu-shona-intent.streamlit.app (Streamlit Community Cloud; it may take about 30 seconds to wake up)
 - Note: at 3:09 the presenter reads 0.80, which is v1's score on its original 50-sentence test; the on-screen caption corrects it. The v2 fresh-test result is 0.920 accuracy / 0.919 macro-F1.
 
 ## Required materials
