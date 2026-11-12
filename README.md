@@ -5,7 +5,7 @@
 - Team number and name: Team 03, "Ubuntu"
 - Three members and their contributions:
   - Alvin Murithi (GitHub `cypher-30`): code and demo. Set up the repository, adapted the starter kit, ran validation, training and the test runs, built the Streamlit demo.
-  - Mukundi Witness Chingwena: Shona data and language review. Wrote and labelled all 595 sentences and coordinated the independent review.
+  - Mukundi Witness Chingwena (GitHub `mukundi0`): Shona data and language review. Wrote and labelled all 595 sentences and coordinated the independent review.
   - Natalie Chelagat (GitHub `natalie400`): documentation. Data card, data plan, annotation guide, quality report and contribution statement.
   - Independent reviewer `FDK`, a Shona speaker who is not an author, reviewed every row.
 - Working language/variety: Shona (`sn`), mostly standard written Shona, with some informal spelling, Shona–English code-switching and a few Karanga and Ndau words in the newer rows.
