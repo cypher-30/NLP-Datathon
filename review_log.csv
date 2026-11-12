@@ -1,0 +1,81 @@
+record_id,split,label,contributor_code,reviewer_code,round,decision,before,after,reason
+SN-305,test,weather_query,MUK,FDK,Round 1,changed,"Ndichada bhachi here manheru ano, kuchatonhora here?",Ndichada bhachi here kana ndichibuda neusiku?,too close to an existing row; Too close to old SN-006
+SN-376,test,news_query,MUK,FDK,Round 1,changed,Nhau dzekuGweru dzanhasi ndedzipi?,Pane nhau dzekuGweru here dzanhasi?,too close to an existing row; Same sentence shape as two training rows (changed again in Round 3)
+SN-392,test,qa_definition,MUK,FDK,Round 1,changed,Shoko rekuti 'mukwerera' rinorevei?,Mukwerera unorevei?,too close to an existing row; Same shape as 4 old rows
+SN-394,test,qa_definition,MUK,FDK,Round 1,changed,Tsanangura kuti immigration chii.,Immigration inorevei kana tichitaura nezvenyika?,too close to an existing row; Same shape as training rows
+SN-578,train,qa_definition,MUK,FDK,Round 1,changed,Shoko rekuti 'rupawo' rinorevei?,Ko rupawo chii?,too close to an existing row; Same shape as old rows
+SN-436,train,alarm_set,MUK,FDK,Round 1,changed,Isa alarm ya6:40 mangwanani.,Alarm yangu ngairire na6:40 mangwanani.,too close to an existing row; Too close to old SN-052
+SN-308,test,datetime_query,MUK,FDK,Round 2,changed,Kusvika Kisimusi kwasara mazuva mangani?,Mumwedzi uno mune maSvondo mangani?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-309,test,datetime_query,MUK,FDK,Round 2,changed,Nyamusi i date ringani?,date yanhasi ndeyei,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-321,test,alarm_set,MUK,FDK,Round 2,changed,Nyamusi manheru isa alarm ya9.,Ndiisirewo alarm ichirira na9 usiku hwanhasi.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-332,test,calendar_set,MUK,FDK,Round 2,changed,…pakarenda nyamusi na2 masikati.,…pakarenda na2 masikati anhasi.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-346,test,lists_createoradd,MUK,FDK,Round 2,changed,Wedzera dovi pane zvandichatenga.,"Dovi rapera, riise mune zvandichatenga.","same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-354,test,lists_createoradd,MUK,FDK,Round 2,changed,Nyamusi ndiisirewo kudyara mbeu pane zvekuita.,Kudyara mbeu kuiswe pane zvekuita nhasi.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Changed twice; intermediate text not recorded"
+SN-364,test,lists_query,MUK,FDK,Round 2,changed,Nyamusi ndine mabasa api ari pa to-do?,Ndine mabasa api ari parondedzero yanhasi?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Changed twice; intermediate text not recorded"
+SN-389,test,qa_definition,MUK,FDK,Round 2,changed,Ndiudze kuti cryptocurrency chii.,Cryptocurrency imari yerudzii?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-390,test,qa_definition,MUK,FDK,Round 2,changed,Hutsanana chii?,Shuro imhuka yerudzii?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Karanga word added"
+SN-393,test,qa_definition,MUK,FDK,Round 2,changed,Interest rate zvinorevei?,Ndiudze zvinoreva interest rate pachikwereti.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-409,train,weather_query,MUK,FDK,Round 2,changed,check weather yeBindura yamangwana,mangwana kuBindura zvakamira sei nezvemamiriro ekunze,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-416,train,datetime_query,MUK,FDK,Round 2,changed,Mangwana idate ringani?,Musi wemangwana ndewechingani?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-422,train,datetime_query,MUK,FDK,Round 2,changed,Tiri mu-quarter yechingani yegore?,Ino ndiyo quarter yechitatu here kana yechina?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-426,train,datetime_query,MUK,FDK,Round 2,changed,Mazuva mangani kubva nhasi kusvika 18 Kubvumbi?,Nguva yeZimbabwe iri paGMT+2 here?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-455,train,alarm_set,MUK,FDK,Round 2,changed,"Ndavata, ndimutse kana yasvika 11 manheru.","Ndoda kuqambaya zvishoma, ndimutse na11 manheru.","same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Ndau word added"
+SN-457,train,calendar_set,MUK,FDK,Round 2,changed,Isa roora raMunya pakarenda neMugovera unouya.,"Roora raMunya rinoitwa Mugovera unouya, rinyore pakarenda.","same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-466,train,calendar_set,MUK,FDK,Round 2,changed,Ronga musangano wemhuri kumusha kuChipinge…,Ronga kushanyira vabereki edu kuChipinge…,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Ndau word added (edu)"
+SN-475,train,calendar_set,MUK,FDK,Round 2,changed,book appointment yekugadzirisa foni Monday 10 am pa calendar,"foni yangu inogadziriswa Monday 10 am, iisa pa calendar","same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-476,train,calendar_query,MUK,FDK,Round 2,changed,Ndine chii neChina manheru?,Ndine chii chakanyorwa pakarenda neChina?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-493,train,calendar_query,MUK,FDK,Round 2,changed,ko ndine chii masikati ano,ndine chii chandakarongerwa masikati ano,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-499,train,lists_createoradd,MUK,FDK,Round 2,changed,Tanga to-do list yekugadzirisa imba.,"Ndinoda kunyora zvese zvinoda kugadziriswa mumba, gadzira list yacho.","same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-500,train,lists_createoradd,MUK,FDK,Round 2,changed,Nyora kubhadhara school fees mune zvekuita zvaMuvhuro.,Isa kubhadhara school fees pa to-do yangu.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-503,train,lists_createoradd,MUK,FDK,Round 2,changed,"Pamabasa angu emangwana, wedzera kuchenesa danga remombe.",Kuchenesa danga remombe kuve rimwe remabasa angu emangwana.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-510,train,lists_createoradd,MUK,FDK,Round 2,changed,add mabhanana pa shopping list,mabhanana ndiisirewo mune zvekutenga,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-512,train,lists_createoradd,MUK,FDK,Round 2,changed,Nyamusi ndinyorerewo kuendesa mombe kudhipi…,Ndinyorerewo kuendesa mombe kudhipi mumabasa angu evhiki.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-518,train,lists_query,MUK,FDK,Round 2,changed,Shopping list yangu ine zvinhu zvingani?,Ndasara nezvinhu zvingani zvekutenga?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-536,train,play_music,MUK,FDK,Round 2,changed,Ridza nziyo dzaNutty O.,Ndiisirewo zvinoimbwa naNutty O.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-537,train,play_music,MUK,FDK,Round 2,changed,Ndinoda kunzwa Enzo Ishall.,Ndiridzire chero chinhu chaEnzo Ishall.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-543,train,play_music,MUK,FDK,Round 2,changed,Ridza nziyo dzemakwaya dzechikoro.,Ndinoda nziyo dzemakwaya dzechikoro.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-546,train,play_music,MUK,FDK,Round 2,changed,Ridza nziyo dzekare dzaFreeman.,Tinzwei zvekare zvaFreeman.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-549,train,play_music,MUK,FDK,Round 2,changed,Ridza nziyo dzaMambo Dhuterere.,"Mambo Dhuterere, ndiridzire.","same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Changed twice; intermediate text not recorded"
+SN-550,train,play_music,MUK,FDK,Round 2,changed,ridza nziyo dzaSniper Storm,"sniper storm plz, chero rwiyo","same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-553,train,play_music,MUK,FDK,Round 2,changed,Ridza nziyo dzine marimba.,Nziyo dzine marimba ndidzo dzandinoda izvozvi.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-554,train,play_music,MUK,FDK,Round 2,changed,Ridza nziyo dzandakaisa ma-like.,Nziyo dzandakaisa ma-like dzitambe dzese.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Changed twice; intermediate text not recorded"
+SN-571,train,news_query,MUK,FDK,Round 2,changed,Nyamusi kune nhau dzipi dzemafirimu nevatambi?,Kune nhau dzipi dzemafirimu nevatambi?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-580,train,qa_definition,MUK,FDK,Round 2,changed,Cloud storage chii?,Ndibatsirewo kunzwisisa cloud storage.,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-581,train,qa_definition,MUK,FDK,Round 2,changed,Tsanangura kuti antibiotic chii.,Antibiotic mushonga wakaita sei?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-582,train,qa_definition,MUK,FDK,Round 2,changed,Izwi rekuti 'kurova guva' rinorevei?,Kurova guva itsika yei?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-583,train,qa_definition,MUK,FDK,Round 2,changed,Ozone layer chii?,Chii chinonzi ozone layer?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-584,train,qa_definition,MUK,FDK,Round 2,changed,ROI zvinorevei?,ROI inomirirei mubhizinesi?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-586,train,qa_definition,MUK,FDK,Round 2,changed,Gravity chii?,Gravity inorevei muchiShona chakareruka?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-587,train,qa_definition,MUK,FDK,Round 2,changed,Tsanangura kuti dividend chii.,"Mubhizinesi, dividend zvinoreva kuti chii?","same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-590,train,qa_definition,MUK,FDK,Round 2,changed,Hypertension chii?,Shumo chii?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words; Karanga word added"
+SN-591,train,qa_definition,MUK,FDK,Round 2,changed,Phishing zvinorevei?,Phishing ndechii?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-594,train,qa_definition,MUK,FDK,Round 2,changed,Malware chii?,Ko malware zvinoreva chii?,"same pattern with only a name changed, too much 'nyamusi', or adding dialect words"
+SN-318,test,alarm_set,MUK,FDK,Round 3,changed,Isa alarm ya5 manheru kuti ndizive kuti ndobuda kubasa.,"Ndoda alarm ichirira na5 manheru, ndizive kuti ndobuda kubasa.",final check for repeated sentence patterns
+SN-325,test,alarm_set,MUK,FDK,Round 3,changed,Isa alarm yeChina na3:30 masikati ndisakanganwa…,"PaChina na3:30 masikati alarm ngairire, ndisakanganwa…",final check for repeated sentence patterns
+SN-327,test,calendar_set,MUK,FDK,Round 3,changed,Nyora pakarenda kuti ndine rwendo rwekuKariba kubva 5 kusvika 8 Zvita.,"Rwendo rwangu rwekuKariba kubva 5 kusvika 8 Zvita, runyore pakarenda.",final check for repeated sentence patterns
+SN-348,test,lists_createoradd,MUK,FDK,Round 3,changed,isa matemba pa shopping list,isa matemba pa grocery list,final check for repeated sentence patterns
+SN-357,test,lists_query,MUK,FDK,Round 3,changed,Dovi rakaiswa here pa shopping list?,Dovi rakaiswa here mune zvekutenga?,final check for repeated sentence patterns
+SN-359,test,lists_query,MUK,FDK,Round 3,changed,To-do list yangu ine zvinhu zvingani zvisati zvapera?,To-do list yangu yasara nemabasa mangani?,final check for repeated sentence patterns
+SN-366,test,play_music,MUK,FDK,Round 3,changed,Ridza nziyo dzaKiller T.,Ndiridzirewo Killer T.,final check for repeated sentence patterns
+SN-368,test,play_music,MUK,FDK,Round 3,changed,Ndinoda kunzwa Janet Manyowa.,Isa nziyo dzaJanet Manyowa.,final check for repeated sentence patterns
+SN-375,test,play_music,MUK,FDK,Round 3,changed,Ridza zvakare rwiyo urwu.,Dzokorora rwiyo urwu.,final check for repeated sentence patterns
+SN-376,test,news_query,MUK,FDK,Round 3,changed,Pane nhau dzekuGweru here dzanhasi?,Kuchii kuri kuitika kuGweru munhau dzanhasi?,final check for repeated sentence patterns; Second change (see Round 1)
+SN-377,test,news_query,MUK,FDK,Round 3,changed,Ko pane nhau dzeWarriors here?,"Warriors dzaita sei, nhau dzinoti chii?",final check for repeated sentence patterns
+SN-379,test,news_query,MUK,FDK,Round 3,changed,Ndiudze zviri kuitika muSouth Africa nhasi munhau.,South Africa yakamira sei munhau dzanhasi?,final check for repeated sentence patterns
+SN-382,test,news_query,MUK,FDK,Round 3,changed,Pane nhau here dzekudonha kwemari yeZiG?,ZiG yadonha here? Ndiudze nhau dzayo.,final check for repeated sentence patterns
+SN-386,test,qa_definition,MUK,FDK,Round 3,changed,Blockchain chii?,Ndiudzewo blockchain kuti chii.,final check for repeated sentence patterns
+SN-387,test,qa_definition,MUK,FDK,Round 3,changed,Chivanhu zvinorevei?,Chivanhu chinorevei chaizvo?,final check for repeated sentence patterns
+SN-388,test,qa_definition,MUK,FDK,Round 3,changed,Izwi rekuti 'humbowo' rinorevei?,Humbowo chii pamutemo?,final check for repeated sentence patterns
+SN-414,train,weather_query,MUK,FDK,Round 3,changed,Nyamusi kuchanaya here kuNyanga?,Nyamusi kuNyanga kune mvura here?,final check for repeated sentence patterns
+SN-442,train,alarm_set,MUK,FDK,Round 3,changed,Set alarm 4 a.m. ndine shift yekutanga.,"Ndine shift yekutanga, ndimutse na4 a.m.",final check for repeated sentence patterns
+SN-443,train,alarm_set,MUK,FDK,Round 3,changed,"Isa alarm ya12:30 masikati, nguva yekudya.","Alarm ya12:30 masikati, nguva yekudya.",final check for repeated sentence patterns
+SN-449,train,alarm_set,MUK,FDK,Round 3,changed,Isa alarm ya4:20 mangwanani eChina chete.,"Mangwanani eChina chete, alarm ya4:20.",final check for repeated sentence patterns
+SN-451,train,alarm_set,MUK,FDK,Round 3,changed,Isa alarm ya1:15 masikati neSvondo.,Svondo ndiisire alarm ya1:15 masikati.,final check for repeated sentence patterns
+SN-467,train,calendar_set,MUK,FDK,Round 3,changed,Nyora pakarenda kuti ndiri pazororo kubva 20 kusvika 27.,Nyora pakarenda kuti ndiri pazororo svondo rese rinouya.,final check for repeated sentence patterns
+SN-473,train,calendar_set,MUK,FDK,Round 3,changed,Isa musangano nesaMunya pakarenda Chipiri masikati.,"SaMunya vanoda kusangana neni Chipiri masikati, zvinyore pakarenda.",final check for repeated sentence patterns
+SN-480,train,calendar_query,MUK,FDK,Round 3,changed,Pane chiri pakarenda here pakati pa1 na3 masikati mangwana?,Pakarenda yangu mangwana masikati pane chii?,final check for repeated sentence patterns
+SN-494,train,calendar_query,MUK,FDK,Round 3,changed,Ndakaronga kusangana nesaMunya riini?,Ndichasangana nesaMunya riini?,final check for repeated sentence patterns
+SN-511,train,lists_createoradd,MUK,FDK,Round 3,changed,Wedzera kufonera Tafadzwa pane zvekuita mangwana.,"Mangwana ndinofanira kufonera Tafadzwa, zviise pa to-do.",final check for repeated sentence patterns
+SN-557,train,news_query,MUK,FDK,Round 3,changed,Ndiudze nhau dzePremier Soccer League.,Zvigumisiro zvePremier Soccer League zvinoti chii munhau?,final check for repeated sentence patterns
+SN-563,train,news_query,MUK,FDK,Round 3,changed,Pane chakaitika here mumigodhi yeZvishavane munhau?,Mumigodhi yeZvishavane maitika chii maererano nenhau?,final check for repeated sentence patterns
+SN-565,train,news_query,MUK,FDK,Round 3,changed,Ndiudze nhau dzeCAF Champions League.,Ndiudzewo zviri kuitika muCAF Champions League.,final check for repeated sentence patterns
